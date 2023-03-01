@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Work</title>
+</head>
+
+<body>
+	<h2>Задача 9</h2>
+	<h3>Умова задачі</h3>
+	<p>
+		Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість від’ємних
+		показів температури.
+	</p>
+
+	<h3>Розв'язок</h3>
+	<script>
+
+		function getDefinitionNegativeValues(value) {
+			if (value < 0) return 1
+			else return 0
+		}
+
+		const quantityValues = parseInt(prompt('Введіть кількість значень температур'))
+		let quantityNegativeValues = 0
+		for (let i = 1; i <= quantityValues; i++) {
+			const userValueTemp = parseFloat(prompt(`Введіть ${i} значення температури`))
+			quantityNegativeValues += getDefinitionNegativeValues(userValueTemp)
+		}
+
+		document.write(`Серед ${quantityValues} показів температури було ${quantityNegativeValues} від’ємних.`)
+
+	</script>
+	<style>
+		h2 {
+			color: #08368b;
+		}
+
+		h3 {
+			color: #06700f;
+		}
+	</style>
+</body>
+
+</html>
